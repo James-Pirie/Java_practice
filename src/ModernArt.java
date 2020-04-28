@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class ModernArt {
     public static void main(String[] args){
@@ -19,17 +20,42 @@ public class ModernArt {
         System.out.println(x_location);
         System.out.println(y_location);
 
-        for (int i = 1; i < height_int; i ++) {
-            for (int x = 1; x < width_int; x++) {
-                if (i == y_location && x == x_location)
-                    System.out.println("yo mama");
+        for (int y = 0; y < height_int; y ++) {
+            for (int x = 0; x < width_int; x++) {
+                if (y == y_location - 1 && x == x_location - 1) {
+                    canvas_gird[x][y] = 1;
+
+
+                }
 
                 else
-                    canvas_gird[x][i] = 0;
-                System.out.println(canvas_gird[x][i]);
+                    canvas_gird[x][y] = 0;
+            }
+
+        }
+        int number_of_sides_in_a_square = 4;
+        Integer initial_spread = spread;
+        for (int i = 0; i < spread; i ++){
+            for (int x = 0; x < initial_spread; x ++){
+                int range_of_spread = initial_spread/2 - 1;
+                for (int z = 0;z < number_of_sides_in_a_square; z ++)
+                    if (z == 0)
+                        canvas_gird[][]
+                    else if (z == 1)
+                        System.out.println();
+                    else if (z == 2)
+                        System.out.println();
+                    else if (z == 3)
+                        System.out.println();
             }
         }
 
-
+        for (int[] row : canvas_gird) {
+            StringJoiner sj = new StringJoiner(" | ");
+            for (int col : row) {
+                sj.add(String.format("%2d", col));
+            }
+            System.out.println(sj.toString());
+        }
     }
 }
