@@ -31,7 +31,6 @@ public class ModernArt {
                 else
                     canvas_gird[x][y] = 0;
             }
-
         }
         int number_of_sides_in_a_square = 4;
         Integer initial_spread = spread;
@@ -40,7 +39,7 @@ public class ModernArt {
                 int range_of_spread = initial_spread/2 - 1;
                 for (int z = 0;z < number_of_sides_in_a_square; z ++)
                     if (z == 0)
-                        canvas_gird[][]
+                        System.out.println();
                     else if (z == 1)
                         System.out.println();
                     else if (z == 2)
